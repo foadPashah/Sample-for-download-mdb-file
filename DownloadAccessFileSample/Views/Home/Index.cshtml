@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row col-sm-12 container form-group">
+    <div class="row list-group-item-text" style="padding:5px">
+        <div class="col-sm-3">
+            @Html.Label("Download File")
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <input type="button" value="Download" class="btn btn-success" onclick="downloadfile()" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function downloadfile() {
+            window.location.href = '@Url.Action("DownloadFile", "Home")';
+        }
+    </script>
+    
+}
